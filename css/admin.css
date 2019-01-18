@@ -1,0 +1,412 @@
+/*
+
+//   ___      ___ ___  ___      ___           __      _______   ________  
+//  |"  \    /"  |"  \/"  |    |"  |         /""\    |   _  "\ /"       ) 
+//   \   \  //  / \   \  /     ||  |        /    \   (. |_)  :(:   \___/  
+//    \\  \/. ./   \\  \/      |:  |       /' /\  \  |:     \/ \___  \    
+//     \.    //    /\.  \       \  |___   //  __'  \ (|  _  \\  __/  \\   
+//      \\   /    /  \   \     ( \_|:  \ /   /  \\  \|: |_)  :)/" \   :)  
+//       \__/    |___/\___|     \_______(___/    \___(_______/(_______/  
+//
+// Unapproved use, modification and redistribution of this code and respective product is strictly prohibited.
+// Copyright© 2017 Keanu Ashwell all rights are reserved to the author, creator, registered 
+// and licensed owners of this product and it's content
+
+*/
+
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Bellefair');
+
+/* Global DOM */
+
+/* Meta Classes */
+
+a, a:link, a:visited, a:active {
+
+    color: #FFFFFF;
+
+}
+
+/* ID */
+
+#grid-content {
+
+    display: grid;
+
+    grid-template-columns: 10px 1fr 1fr 1fr 10px; 
+    grid-template-rows: 10px 30px 20px auto;
+
+}
+
+#grid-welcome {
+    
+    grid-column: 2;
+    grid-row: 2;
+    
+    justify-self: start;
+    
+    -ms-flex-item-align: center;
+    
+    align-self: center;
+    
+    color: #FFFFFF;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    
+/*    padding-bottom: 2px;*/
+    
+/*    border-bottom: 1px solid #FFFFFF;*/
+    
+    word-spacing: -1px;
+    
+}
+
+#grid-clanrank {
+    
+    grid-column: 4;
+    grid-row: 2;
+
+    justify-self: end;
+
+    -ms-flex-item-align: center;
+
+    align-self: center;
+
+    color: #FFFFFF;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+
+    word-spacing: -1px;
+    
+}
+
+#grid-heading-options {
+    
+    display: grid;
+    
+    grid-column: 2;
+    grid-row: 3;
+    
+    grid-template-columns: auto auto auto auto auto 300px auto;
+    grid-template-rows: auto 1px;
+    
+}
+
+#grid-heading-memberships {
+    
+    grid-column: 1;
+    
+}
+
+#grid-heading-events {
+    
+    grid-column: 2;
+    
+}
+
+#grid-heading-vxbans {
+    
+    grid-column: 3;
+    
+}
+
+#grid-heading-servers {
+    
+    grid-column: 4;
+    
+}
+
+#grid-heading-administration {
+    
+    grid-column: 5;
+    
+}
+
+#grid-heading-underline {
+    
+    position: relative;
+    
+    grid-column: 1;
+    
+    background-color: #ffc500;
+    
+}
+
+#grid-data {
+
+    display: grid;
+
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+    grid-row: 4;
+    
+    border-top: 1px solid #FFFFFF;
+
+}
+
+#grid-server-table-container {
+    
+    grid-column-start: 1;
+    grid-column-end: 5;
+    
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+}
+
+#grid-servers-table {
+    
+    width: 100%;
+    height: auto;
+    
+    padding-top: 15px;
+
+}
+
+#table-servers-headings {
+    
+    color: #FFFFFF;
+
+    text-align: left;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    
+    margin: auto 0;
+    
+}
+
+#table-servers-data {
+    
+    color: #FFFFFF;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    
+    text-align: left;
+    
+}
+
+#table-server-search {
+
+    background: transparent;
+
+    color: #FFFFFF;
+
+    border-top: transparent;    
+    border-right: transparent;    
+    border-bottom: 1px solid #FFFFFF;
+    border-left: transparent;
+
+    margin-left: 10px;
+
+}
+
+#grid-preloader {
+
+    grid-column: 6;
+    grid-row: 1;
+
+    overflow: hidden;
+
+}
+
+#grid-preloader-svg {
+
+    justify-self: center;
+
+    -ms-flex-item-align: center;
+
+    align-self: center;
+
+    height: auto;
+    width: 150px;
+
+    margin-bottom: -10px;
+
+}
+
+/* Classes */
+
+.grid-headings {
+    
+    display: inline-block;
+    
+    grid-row: 1;
+    
+    justify-self: start;
+    
+    -ms-flex-item-align: center;
+    
+    align-self: center;
+    
+    margin: 0px;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    
+    margin-bottom: 5px;
+    
+    cursor: pointer;
+    
+}
+
+.table-icon-flag {
+    
+    position: relative;
+    
+    top: 2.5px;
+    
+    height: 17;
+    width: auto;
+    
+}
+
+/* Sub Selectors */
+
+#table-servers-headings > td {
+    
+    padding-top: 0px;
+
+}
+
+#table-servers-data > td {
+
+    height: 20px;
+    
+    padding: 10px 0px 10px 0px;
+    
+    border-bottom: 1px solid #FFFFFF;
+
+}
+
+#table-servers-data > #table-servers-id {
+
+    padding-left: 20px;
+
+}
+
+#table-servers-data > #table-servers-name {
+
+    padding-left: 0px;
+
+}
+
+#table-servers-info > * {
+
+    height: auto;
+    width: auto;
+    
+    max-height: 16px;
+    max-width: 16px;
+    
+    padding: 0px 2.5px 0px 2.5px;
+    
+}
+
+#table-servers-data > #table-servers-ping {
+
+    padding-left: 0px;
+
+}
+
+#table-servers-data > #table-servers-registeredcommunity {
+
+    padding-left: 30px;
+
+}
+
+#table-servers-data > #table-servers-id:hover {
+
+    color: #0000FF;
+    
+    text-decoration: underline;
+    
+    cursor: pointer;
+
+}
+
+#table-servers-data > #table-servers-port {
+    
+    padding-left: 20px;
+    
+}
+
+#table-server-search:focus {
+
+    border-bottom: 1px solid #ffc500;
+
+}
+
+/* Media Queries */
+
+@supports(display: grid) {
+
+    /* Older Monitors */
+
+    @media(max-width: 1280px) {
+
+        /* Id */
+
+        #grid-content {
+
+            display: grid;
+
+            grid-template-columns: 10px 1.4fr 1fr 1fr 10px; 
+            grid-template-rows: 10px 30px 20px auto;
+            
+        }
+
+        #grid-heading-options {
+
+            display: grid;
+
+            grid-column: 2;
+            grid-row: 3;
+
+            grid-template-columns: auto auto auto auto auto 200px auto;
+            grid-template-rows: auto;
+
+        }
+        
+        #grid-data-servers {
+            
+            display: grid;
+            
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 10px 1fr;
+        }
+        
+        #table-servers-info > * {
+
+            height: auto;
+            width: auto;
+
+            max-height: 16px;
+            max-width: 16px;
+
+        }
+        
+        /* Classes */
+
+    }
+
+    /* Tablet */
+
+    /* Phone */
+
+    @media(max-width: 768px) {
+
+
+
+    }
+
+}

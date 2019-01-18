@@ -1,0 +1,238 @@
+/*
+
+//   ___      ___ ___  ___      ___           __      _______   ________  
+//  |"  \    /"  |"  \/"  |    |"  |         /""\    |   _  "\ /"       ) 
+//   \   \  //  / \   \  /     ||  |        /    \   (. |_)  :(:   \___/  
+//    \\  \/. ./   \\  \/      |:  |       /' /\  \  |:     \/ \___  \    
+//     \.    //    /\.  \       \  |___   //  __'  \ (|  _  \\  __/  \\   
+//      \\   /    /  \   \     ( \_|:  \ /   /  \\  \|: |_)  :)/" \   :)  
+//       \__/    |___/\___|     \_______(___/    \___(_______/(_______/  
+//
+// Unapproved use and redistribution of this code and respective product is strictly prohibited.
+// Copyright© 2017 Keanu Ashwell all rights are reserved to the author, creator, registered 
+// and licensed owners of this product and it's content
+
+*/
+
+/* Global DOM */
+
+/* ID */
+
+#grid-account-login {
+    
+    display: grid;
+    
+    grid-column-start: 3;
+    grid-column-end: 5;
+    
+    grid-row: 3;
+    
+    grid-template-columns: 150px 175px 175px;
+    grid-template-rows: auto;
+    
+    border-top: 1px solid #5f5757;
+    
+    border-bottom-left-radius: 20px;
+    
+    background-color: #4b4b4b;
+    
+}
+
+#grid-form-login {
+    
+    display: none;
+    
+}
+
+#grid-login-username {
+    
+    grid-column: 2;
+    grid-row: 1;
+    
+    -ms-flex-item-align: center;
+    
+    align-self: center;
+    
+    justify-self: center;
+    
+    background-color: transparent;
+    
+    color: #FFFFFF;
+    
+    height: 20px;
+    
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #FFFFFF;
+    border-left: none;
+    
+    z-index: 1;
+    
+}
+
+#grid-login-password {
+    
+    grid-column: 3;
+    grid-row: 1;
+    
+    -ms-flex-item-align: center;
+
+    align-self: center;
+
+    justify-self: center;
+
+    background-color: transparent;
+
+    color: #FFFFFF;
+    
+    height: 20px;
+
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #FFFFFF;
+    border-left: none;
+
+    z-index: 1;
+    
+}
+
+#grid-content {
+    
+    display: grid;
+    
+    grid-template-columns: auto 475px 475px 475px;
+    grid-template-rows: 30px 80px 600px auto;
+    
+}
+
+#grid-welcome {
+    
+    grid-column: 1;
+    grid-row: 2;
+    
+    -ms-flex-item-align: center;
+    
+    align-self: center;
+    
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.6em;
+    
+    padding-left: 20px;
+    
+}
+
+#grid-heading-area1 {
+    
+    grid-column: 2;
+    grid-row: 2;
+
+    -ms-flex-item-align: center;
+
+    align-self: center;
+
+    justify-self: center;
+    
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+    font-weight: 300;
+
+    overflow: hidden;
+    
+}
+
+#grid-heading-area2 {
+
+    grid-column: 3;
+    grid-row: 2;
+
+    -ms-flex-item-align: center;
+
+    align-self: center;
+
+    justify-self: center;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+    font-weight: 300;
+
+    overflow: hidden;
+
+}
+
+#grid-text-area1 {
+    
+    grid-column: 1;
+    grid-row: 3;
+    
+}
+
+#grid-text-area2 {
+    
+    grid-column: 2;
+    grid-row: 3;
+    
+}
+
+#grid-text-area3 {
+    
+    grid-column: 3;
+    grid-row: 3;
+    
+}
+
+/* Classes */
+
+.grid-landing-text {
+    
+    padding-left: 20px;
+    padding-right: 20px;
+
+    
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    
+    letter-spacing: 0.4px;
+    
+    overflow: hidden;
+        
+}
+
+/* Sub Selectors */
+
+/* Animations */
+
+/* Media Queries */
+
+@supports(display: grid) {
+
+    /* Older Monitors */
+    
+    @media(max-width: 1280px) {
+        
+        /* Ids */
+        
+        #grid-content {
+            
+            display: grid;
+            
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: 30px 80px 600px auto;
+            
+        }
+        
+        /* Classes */
+            
+    }
+ 
+    /* Tablet */
+    
+    /* Phone */
+    
+    @media(max-width: 768px) {
+        
+        
+        
+    }
+    
+}

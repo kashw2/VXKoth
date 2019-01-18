@@ -1,0 +1,225 @@
+/*
+
+//   ___      ___ ___  ___      ___           __      _______   ________  
+//  |"  \    /"  |"  \/"  |    |"  |         /""\    |   _  "\ /"       ) 
+//   \   \  //  / \   \  /     ||  |        /    \   (. |_)  :(:   \___/  
+//    \\  \/. ./   \\  \/      |:  |       /' /\  \  |:     \/ \___  \    
+//     \.    //    /\.  \       \  |___   //  __'  \ (|  _  \\  __/  \\   
+//      \\   /    /  \   \     ( \_|:  \ /   /  \\  \|: |_)  :)/" \   :)  
+//       \__/    |___/\___|     \_______(___/    \___(_______/(_______/  
+//
+// Unapproved use and redistribution of this code and respective product is strictly prohibited.
+// Copyright© 2017 Keanu Ashwell all rights are reserved to the author, creator, registered 
+// and licensed owners of this product and it's content
+
+*/
+
+/* Global DOM */
+
+/* ID */
+
+#grid-content {
+    
+    display: grid;
+    
+    grid-template-columns: auto 750px auto;
+    grid-template-rows: 75px auto 50px;
+    
+}
+
+#grid-heading-welcome {
+    
+    grid-column: 2;
+    grid-row: 1;
+    
+    justify-self: center;
+    
+    -ms-flex-item-align: center;
+    
+    align-self: center;
+    
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+    
+    color: #000000;
+    
+}
+
+/* Registration */
+
+    #grid-register-container {
+
+        display: grid;
+
+        grid-column: 2;
+        grid-row: 2;
+
+        grid-template-columns: 50px auto 50px;
+        grid-template-rows: auto 50px 70px 50px 70px 50px 70px 100px 100px;
+
+        border-left: 1px solid #000000;
+        border-right: 1px solid #000000;
+
+        border-radius: 10px;
+
+        padding-right: 20px;
+        padding-left: 20px;
+
+    }
+
+    /* Registration Content */
+
+        #grid-registration-form {
+
+            display: none;
+
+        }
+
+        #grid-input-email {
+
+            grid-column: 2;
+            grid-row: 3;
+
+        }
+
+        #grid-input-username {
+
+            grid-column: 2;
+            grid-row: 5;
+
+        }
+
+        #grid-input-password {
+
+            grid-column: 2;
+            grid-row: 7;
+
+        }
+
+        #grid-heading-register {
+
+            grid-column: 2;
+            grid-row: 9;
+
+            justify-self: center;
+
+            -ms-flex-item-align: center;
+
+            align-self: center;
+
+            font-family: 'Oswald', sans-serif;
+            font-size: 3em;
+            font-weight: 600;
+
+            color: #000000;
+
+            text-decoration: underline;
+            
+            cursor: pointer;
+
+        }
+
+    /* Registration Information Container */
+
+    #grid-registration-informative {
+
+        display: grid;
+        
+        grid-column: 2;
+        grid-row: 1;
+        
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 15px 25px 25px 25px 25px auto;
+        
+
+    }
+
+/* Classes */
+
+.grid-register-form {
+    
+    justify-self: center;
+    
+    -ms-flex-item-align: center;
+    
+    align-self: center;
+    
+    height: 50px;
+    width: 500px;
+    
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #000000;
+    border-left: none;
+    
+}
+
+.grid-registration-response-success {
+
+    grid-column: 2;
+    grid-row: 8;
+
+    justify-self: center;
+
+    -ms-flex-item-align:  center;
+
+    align-self:  center;
+    
+    color: #00FF00;
+
+}
+
+.grid-registration-response-error {
+    
+    grid-column: 2;
+    grid-row: 8;
+
+    justify-self: center;
+
+    -ms-flex-item-align:  center;
+
+    align-self:  center;
+
+    color: #FF0000;
+    
+}
+
+/* Sub Selectors */
+
+/* Animations */
+
+/* Media Queries */
+
+@supports(display: grid) {
+
+    /* Older Monitors */
+
+    @media(max-width: 1280px) {
+
+        /* Ids */
+
+        #grid-content {
+
+            display: grid;
+
+            grid-template-columns: auto 750px auto;
+            grid-template-rows: 75px auto 50px;
+
+        }
+
+        /* Classes */
+
+    }
+
+    /* Tablet */
+
+    /* Phone */
+
+    @media(max-width: 768px) {
+
+
+
+    }
+
+}

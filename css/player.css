@@ -1,0 +1,515 @@
+/*
+
+//   ___      ___ ___  ___      ___           __      _______   ________  
+//  |"  \    /"  |"  \/"  |    |"  |         /""\    |   _  "\ /"       ) 
+//   \   \  //  / \   \  /     ||  |        /    \   (. |_)  :(:   \___/  
+//    \\  \/. ./   \\  \/      |:  |       /' /\  \  |:     \/ \___  \    
+//     \.    //    /\.  \       \  |___   //  __'  \ (|  _  \\  __/  \\   
+//      \\   /    /  \   \     ( \_|:  \ /   /  \\  \|: |_)  :)/" \   :)  
+//       \__/    |___/\___|     \_______(___/    \___(_______/(_______/  
+//
+// Unapproved use and redistribution of this code and respective product is strictly prohibited.
+// Copyright© 2017 Keanu Ashwell all rights are reserved to the author, creator, registered 
+// and licensed owners of this product and it's content
+
+*/
+
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css?family=Mukta+Mahee');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed');
+
+/* Global DOM */
+
+table {
+    
+    width: 100%;
+    
+    font-family: 'Open Sans Condensed', sans-serif;
+
+    color: #FFFFFF;
+    
+}
+
+td {
+    
+    text-align: left;
+    
+}
+
+/* ID */
+
+#grid-content {
+
+    display: grid;
+    
+    grid-template-columns: auto;
+    grid-template-rows: 65px auto;
+    
+    overflow: hidden;
+    
+}
+
+#grid-data {
+    
+    display: grid;
+    
+    grid-column: 1;
+    grid-row: 2;
+    
+}
+
+#grid-form-search-uid {
+    
+    display: none;
+    
+}
+
+#grid-form-search-guid {
+    
+    display: none;
+    
+}
+
+#grid-search-uid {
+    
+    grid-column: 1;
+    grid-row: 1;
+    
+    -ms-flex-item-align: start;
+    
+    align-self: start;
+    
+    margin-top: 10px;
+    
+}
+
+#grid-search-guid {
+
+    grid-column: 1;
+    grid-row: 1;
+    
+    -ms-flex-item-align: start;
+    
+    align-self: start;
+    
+    margin-top: 50px;
+
+}
+
+    /* Headings */
+
+    #grid-content-headings {
+
+        display: grid;
+
+        grid-column: 1;
+        grid-row: 1;
+
+        grid-template-columns: 10px 0.037fr 0.043fr 0.030fr 0.037fr 0.035fr 1fr ;
+        grid-template-rows: 10px 20px 20px 1px auto;
+        
+    }
+
+    #grid-heading-career {
+
+        grid-column: 2;
+
+    }
+
+    #grid-heading-weapons {
+
+        grid-column: 3;
+
+    }
+
+    #grid-heading-clans {
+
+        grid-column: 4;
+
+    }
+
+    #grid-heading-squads {
+
+        grid-column: 5;
+
+    }
+
+    #grid-heading-seasons {
+
+        grid-column: 6;
+
+    }
+
+    /* Sub Containers */
+
+    #grid-data-career {
+
+        display: grid;
+        
+        grid-template-columns: 10px 40px 10px 1fr 10px 40px 10px;
+        grid-template-rows: 50px 1fr 10px;
+
+    }
+
+    #grid-data-weapons {
+
+        display: grid;
+        
+        grid-template-columns: 10px 40px 10px 1fr 10px 40px 10px;
+        grid-template-rows: 50px 1fr 10px;
+
+    }
+
+    #grid-data-clans {
+
+        display: grid;
+        
+        grid-template-columns: 10px 40px 10px 1fr 10px 40px 10px;
+        grid-template-rows: 50px 1fr 10px;
+
+    }
+
+    #grid-data-squads {
+
+        display: grid;
+        
+        grid-template-columns: 10px 40px 10px 1fr 10px 40px 10px;
+        grid-template-rows: 50px 1fr 10px;
+
+    }
+
+    #grid-data-seasons {
+
+        display: grid;
+
+        grid-template-columns: 10px 40px 10px 1fr 10px 40px 10px;
+        grid-template-rows: 50px 1fr 10px;
+        
+    }
+
+#grid-preloader {
+    
+    justify-self: center;
+    
+    -ms-flex-item-align: center;
+    
+    align-self: center;
+    
+    height: 100px;
+    
+}
+
+#grid-form-container {
+    
+    display: grid;
+    
+    grid-column: 4;
+    grid-row: 1;
+    
+    grid-template-columns: 4fr 1fr 1fr;
+    
+    -webkit-box-pack: center;
+    
+    -ms-flex-pack: center;
+    
+    justify-content: center;
+    
+    -ms-flex-line-pack: center;
+    
+    align-content: center;
+    
+}
+
+#grid-search-uid-after {
+    
+    grid-column: 2;
+    
+}
+
+#grid-search-guid-after {
+    
+    grid-column: 3;
+    
+}
+
+#grid-nav-left {
+    
+    display: grid;
+    
+    grid-column: 2;
+    
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+    -webkit-box-pack: center;
+    
+    -ms-flex-pack: center;
+    
+    justify-content: center;
+    
+    -ms-flex-line-pack: center;
+    
+    align-content: center;
+    
+}
+
+#grid-nav-right {
+    
+    display: grid;
+    
+    grid-column: 6;
+    
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+    -webkit-box-pack: center;
+    
+    -ms-flex-pack: center;
+    
+    justify-content: center;
+    
+    -ms-flex-line-pack: center;
+    
+    align-content: center;
+    
+}
+
+#grid-table-career-container {
+    
+    grid-column: 4;
+    grid-row: 2;
+    
+    overflow: visible;
+    
+    z-index: 0;
+    
+}
+
+/* Classes */
+
+.grid-heading-selector {
+
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+    -ms-flex-item-align: center;
+
+    align-self: center;
+
+    color: #FFFFFF;
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.4em;
+    
+    text-decoration: underline;
+    
+    padding-left: 30px;
+    
+    cursor: pointer;
+
+}
+
+.grid-input {
+
+    justify-self: start;
+
+    -ms-flex-item-align: center;
+
+    align-self: center;
+
+    background-color: transparent;
+
+    color: #FFFFFF;
+
+    height: 30px;
+    width: 250px;
+
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px groove rgba(255, 255, 255, 1);
+    border-left: none;
+
+    padding-left: 10px;
+
+    margin-left: 10px;
+
+    -webkit-transition: border-bottom 1s ease-in-out;
+
+    transition: border-bottom 1s ease-in-out;
+    
+    z-index: 2;
+
+}
+
+.grid-search-submit {
+
+    display: none;
+
+}
+
+.grid-headings {
+    
+    display: inline-block;
+
+    grid-row: 2;
+
+    justify-self: start;
+
+    -ms-flex-item-align: center;
+
+    align-self: center;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+
+    cursor: pointer;
+    
+}
+
+.grid-data-subcontainer {
+    
+    grid-column: 1;
+    grid-row: 1;
+    
+}
+
+.grid-table-nav {
+    
+    -webkit-transition: background-color 0.5s ease-in-out;
+    
+    transition: background-color 0.5s ease-in-out;
+    
+    cursor: pointer;
+    
+}
+
+/* Sub Selectors */
+
+.grid-headings:hover, .grid-headings:focus, .grid-headings:active, .grid-headings:target {
+    
+    padding-bottom: 0px;
+    
+    border-bottom: 2px solid #ffbe00;
+    
+}
+
+.grid-input:-ms-input-placeholder {
+
+    color: #FFFFFF;
+
+}
+
+.grid-input::-webkit-input-placeholder {
+
+    color: #FFFFFF;
+
+}
+
+.grid-input::placeholder {
+
+    color: #FFFFFF;
+
+}
+
+#grid-nav-left > p {
+    
+    padding-right: 10px;
+    
+}
+
+#grid-nav-right > p {
+    
+    padding-left: 10px;
+    
+}
+
+.grid-table-nav > p {
+    
+    font-size: 4em;
+    
+    color: #929292;
+    
+}
+
+#table-headings > td {
+
+    font-weight: 900;
+    
+}
+
+#table-data > td {
+    
+    font-weight: 100;
+    
+}
+
+/* Animations */
+
+.grid-input:hover, .grid-input:active, .grid-input:focus {
+    
+    border-bottom: 1px groove rgba(255, 0, 0, 1);
+    
+}
+
+.grid-table-nav:hover, .grid-table-nav:active, .grid-table-nav:focus {
+
+    background-color: rgba(68, 68, 68, 0.8);
+
+}
+
+/* Media Queries */
+
+@supports(display: grid) {
+
+    /* Older Monitors */
+
+    @media(max-width: 1280px) {
+
+        /* Ids */
+
+        #grid-content {
+
+            display: grid;
+
+            grid-template-columns: 1280px;
+            grid-template-rows: 50px auto;
+
+        }
+        
+        #grid-data-career {
+
+            display: grid;
+
+            grid-template-columns: 5px 25px 0px 1fr 0px 25px 5px;
+            grid-template-rows: 50px 1fr 10px;
+
+        }
+        
+        #grid-content-headings {
+
+            display: grid;
+
+            grid-column: 1;
+            grid-row: 1;
+
+            grid-template-columns: 10px 0.060fr 0.073fr 0.050fr 0.060fr 0.035fr 1fr ;
+            grid-template-rows: 10px 20px 20px 1px auto;
+
+        }
+        
+        /* Classes */
+
+    }
+
+    /* Tablet */
+
+    /* Phone */
+
+    @media(max-width: 768px) {
+
+
+
+    }
+
+}

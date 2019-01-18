@@ -1,0 +1,592 @@
+/*
+
+//   ___      ___ ___  ___      ___           __      _______   ________  
+//  |"  \    /"  |"  \/"  |    |"  |         /""\    |   _  "\ /"       ) 
+//   \   \  //  / \   \  /     ||  |        /    \   (. |_)  :(:   \___/  
+//    \\  \/. ./   \\  \/      |:  |       /' /\  \  |:     \/ \___  \    
+//     \.    //    /\.  \       \  |___   //  __'  \ (|  _  \\  __/  \\   
+//      \\   /    /  \   \     ( \_|:  \ /   /  \\  \|: |_)  :)/" \   :)  
+//       \__/    |___/\___|     \_______(___/    \___(_______/(_______/  
+//
+// Unapproved use and redistribution of this code and respective product is strictly prohibited.
+// Copyright© 2017 Keanu Ashwell all rights are reserved to the author, creator, registered 
+// and licensed owners of this product and it's content
+
+*/
+
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+@import url('https://fonts.googleapis.com/css?family=Monsterrat');
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+/* Global DOM */
+
+body {
+    
+    margin: auto;
+    
+    overflow-x: hidden;
+    
+}
+
+input:active, input:focus {
+    
+    outline: none;
+    
+}
+
+a:active, a:visited, a:link {
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+}
+
+/* ID */
+
+#grid-container {
+    
+    display: grid;
+    
+    grid-template-columns: auto;
+    grid-template-rows: 60px 814px 100px;
+    
+}
+
+#grid-header {
+    
+    display: grid;
+    
+    grid-row: 1;
+    
+    grid-template-columns: 450px auto 150px 350px;
+    grid-template-rows: 30px 30px 30px;
+    
+}
+
+#grid-header-top {
+    
+    display: grid;
+    
+    grid-template-columns: 350px auto 350px;
+    grid-template-rows: 30px 30px;
+    
+    grid-column-start: 1;
+    grid-column-end: 5;
+    
+    grid-row: 1;
+    
+    background-color: #4b4b4b;
+    
+}
+
+#grid-account-options {
+    
+    display: grid;
+    
+    grid-column: 3;
+    grid-row: 1;
+    
+    grid-template-columns: auto 100px 100px;
+    
+}
+
+#grid-myaccount {
+    
+    grid-column: 3;
+    grid-row: 1;
+    
+}
+
+#grid-logout {
+    
+    grid-column: 2;
+    grid-row: 1;
+    
+}
+
+#grid-register {
+    
+    grid-column: 3;
+    grid-row: 1;
+    
+}
+
+#grid-header-news {
+    
+    grid-column-start: 2;
+    grid-column-end: 4;
+    
+    grid-row: 1;
+    
+/*
+    background-color: #686868;
+
+    background: repeating-linear-gradient(
+        -50deg,
+        rgba(97, 97, 97, 0.5) 1px,
+        rgba(82, 82, 82, 0.5) 7px
+    );
+*/
+    
+    border-right: 1px solid #4f4f4f;
+    border-left: 1px solid #4f4f4f;
+    
+}
+
+#grid-header-bottom {
+
+    display: grid;
+    
+    grid-template-columns: 350px auto 350px;
+    grid-template-rows: 30px 30px;
+    
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    grid-row: 2;
+    
+    background-color: #4f4f4f;
+    
+}
+
+#grid-vxkoth-container {
+    
+    grid-column: 1;
+    
+    -ms-flex-item-align: center;
+    
+    align-self: center;    
+    
+    justify-self: start;
+
+    margin-left: 20px;
+    
+}
+
+#grid-vx {
+    
+    display: inline;
+    
+    color: #CF000F;
+    
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 100;
+    
+    letter-spacing: 0.1px;
+    
+}
+
+#grid-koth {
+    
+    display: inline;
+    
+    color: #FFFFFF;
+    
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 100;
+    
+    letter-spacing: 0.1px;
+    
+}
+
+    /* Footer */
+
+    #grid-footer {
+
+        display: grid;
+
+        grid-column: 1;
+        grid-row: 3;
+
+        grid-template-columns: 100px 300px 600px auto;
+        grid-template-rows: auto;
+
+        background-color: rgba(79, 79, 79, 0.8);
+
+    }
+
+        /* Footer Content */
+
+        #grid-footer-vx-logo {
+
+            grid-column: 1;
+            grid-row: 1;
+
+            justify-self: center;
+
+            -ms-flex-item-align: center;
+
+            align-self: center;
+
+            height: 90px;
+            width: auto;
+
+        }
+
+        #grid-footer-armahosts-logo {
+
+            grid-column: 2;
+            grid-row: 1;
+
+            justify-self: center;
+
+            -ms-flex-item-align: center;
+
+            align-self: center;
+
+            height: auto;
+            width: auto;
+
+        }
+
+        /* Footer Information Container */
+
+        #grid-footer-information {
+
+            display: grid;
+
+            grid-column: 3;
+            grid-row: 1;
+
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 25px 20px 20px 20px auto;;
+
+        }
+
+            /* Footer Information Headings */
+
+            #grid-footer-heading-general {
+
+                grid-column: 1;
+                grid-row: 1;
+
+            }
+
+            #grid-footer-heading-break {
+
+                grid-column: 2;
+                grid-row: 1;
+
+            }
+
+            #grid-footer-heading-misc {
+
+                grid-column: 3;
+                grid-row: 1;
+
+            }
+
+            /* Footer Information General */
+
+            #grid-footer-general-home {
+
+                grid-column: 1;
+                grid-row: 2;
+
+            }
+
+            #grid-footer-general-player {
+
+                grid-column: 1;
+                grid-row: 3;
+
+            }
+
+            /* Footer Information Legal */
+
+            #grid-footer-legal-contact {
+
+                grid-column: 2;
+                grid-row: 2;
+
+            }
+
+            #grid-footer-legal-copyright {
+
+                grid-column: 2;
+                grid-row: 3;
+
+            }
+
+            #grid-footer-legal-privacy {
+
+                grid-column: 2;
+                grid-row: 4;
+
+            }
+
+            /* Footer Information Misc */
+
+            #grid-footer-misc-vxgaming {
+
+                grid-column: 3;
+                grid-row: 2;
+
+            }
+
+            #grid-footer-misc-faq {
+
+                grid-column: 3;
+                grid-row: 3;
+
+            }
+
+            #grid-footer-misc-sitrep {
+
+                grid-column: 3;
+                grid-row: 4;
+
+            }
+
+        /* Footer Media*/
+
+        #grid-footer-media {
+
+            display: grid;
+
+            grid-column: 4;
+
+            grid-template-columns: auto 65px 65px;
+            grid-template-rows: auto auto 15px;
+
+        }
+
+            /* Footer Media Content*/
+
+            #grid-footer-misc-disclaimer {
+
+                grid-column-start: 1;
+                grid-column-end: 4;
+
+                grid-row: 3;
+
+                justify-self: end;
+
+                -ms-flex-item-align: center;
+
+                align-self: center;
+
+                font-size: 0.5em;
+
+            }
+
+            #grid-footer-facebook-logo {
+
+                grid-column: 3;
+                grid-row: 1;
+
+            }
+
+            #grid-footer-twitter-logo {
+
+                grid-column: 2;
+                grid-row: 1;
+
+            }
+
+            #grid-footer-youtube-logo {
+
+                grid-column: 3;
+                grid-row: 2;
+
+            }
+
+            #grid-footer-discord-logo {
+
+                grid-column: 2;
+                grid-row: 2;
+
+            }
+
+/* Classes */
+
+.grid-account-managment {
+
+    justify-self: end;
+    
+    -ms-flex-item-align: center;
+
+    align-self: center;
+
+    color: #FFFFFF;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+
+    padding-right: 10px;
+    
+    cursor: pointer;
+
+}
+
+.grid-user-display {
+    
+    grid-column: 3;
+    grid-row: 1;
+    
+    justify-self: end;
+
+    -ms-flex-item-align: center;
+
+    align-self: center;
+
+    color: #FFFFFF;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+
+    padding-right: 10px;
+    
+}
+
+.grid-footer-headings {
+    
+    justify-self: center;
+    
+    -ms-flex-item-align: center;
+    
+    align-self: center;
+    
+    color: #FFFFFF;
+    
+    font-family: 'Oswald', serif;
+    font-weight: 600;
+    
+    letter-spacing: 1px;
+    
+}
+
+.grid-footer-links {
+    
+    justify-self: center;
+    
+    -ms-flex-item-align: center;
+    
+    align-self: center;
+    
+    color: #FFFFFF;
+    
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.8em;
+    
+    border-bottom: 1px solid #FFFFFF;
+    
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    
+}
+
+.grid-footer-logos {
+    
+    justify-self: center;
+    
+    -ms-flex-item-align: center;
+    
+    align-self: center;
+    
+    height: 35px;
+    width: auto;
+    
+}
+
+/* Sub Selectors */
+
+#grid-header-news > marquee {
+    
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    font-family: 'Montserrat', sans-serif;
+    
+    color: #FFFFFF;
+    
+}
+
+/* Animations */
+
+/* Media Queries */
+
+@supports(display: grid) {
+
+    /* Older Monitors */
+
+    @media(max-width: 1280px) {
+
+        /* Id */
+
+        #grid-container {
+
+            display: grid;
+
+            grid-template-columns: auto;
+            grid-template-rows: 60px 758px 100px;
+
+        }
+        
+        #grid-header {
+
+            display: grid;
+
+            grid-row: 1;
+ 
+            grid-template-columns: 150px;
+            grid-template-rows: 30px 30px 30px;
+   
+        }
+
+        #grid-account-login {
+
+            display: grid;
+            
+            grid-column-start: 4;
+            grid-column-end: 5;
+            
+            grid-row: 3;
+            
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto;
+            
+            border-top: 1px solid #5f5757;
+            
+            border-bottom-left-radius: 20px;
+            
+            background-color: #4b4b4b;
+            
+        }
+        
+        #grid-footer {
+            
+            display: grid;
+            
+            grid-column: 1;
+            grid-row: 3;
+            
+            grid-template-columns: 100px 220px 300px auto;
+            
+            background-color: rgba(79, 79, 79, 0.8);
+            
+        }
+        
+        /* Classes */
+        
+    }
+
+    /* Tablet */
+
+    /* Phone */
+
+    @media(max-width: 768px) {
+
+
+
+    }
+
+}

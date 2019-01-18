@@ -1,0 +1,227 @@
+/*
+
+//   ___      ___ ___  ___      ___           __      _______   ________  
+//  |"  \    /"  |"  \/"  |    |"  |         /""\    |   _  "\ /"       ) 
+//   \   \  //  / \   \  /     ||  |        /    \   (. |_)  :(:   \___/  
+//    \\  \/. ./   \\  \/      |:  |       /' /\  \  |:     \/ \___  \    
+//     \.    //    /\.  \       \  |___   //  __'  \ (|  _  \\  __/  \\   
+//      \\   /    /  \   \     ( \_|:  \ /   /  \\  \|: |_)  :)/" \   :)  
+//       \__/    |___/\___|     \_______(___/    \___(_______/(_______/  
+//
+// Unapproved use and redistribution of this code and respective product is strictly prohibited.
+// Copyright© 2017 Keanu Ashwell all rights are reserved to the author, creator, registered 
+// and licensed owners of this product and it's content
+
+*/
+
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+/* Global DOM */
+
+/* Meta Classes */
+
+.data-part {
+
+    -webkit-animation-name: orangeFade;
+
+    animation-name: orangeFade;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    
+}
+
+/* ID */
+
+#grid-container {
+    
+    display: grid;
+    
+    grid-template-columns: auto;
+    
+    grid-template-rows: 60px 1910px 100px;
+    
+}
+
+#grid-content {
+
+    display: grid;
+
+    grid-template-columns: 10px 75px 250px auto;
+    grid-template-rows: 30px 70px 400px 70px 400px 70px 400px 70px 400px auto;
+
+}
+
+    /* Basic Legal */
+
+    #grid-legal-basic {
+
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 4;
+
+    }
+
+    #grid-legal-heading-basic {
+
+        justify-self: start;
+
+        -ms-flex-item-align: center;
+
+        align-self: center;
+
+        font-family: 'Lora', serif;
+
+    }
+
+    /* Copyright */
+
+    #grid-legal-copyright {
+
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 6;
+
+    }
+
+    #grid-legal-heading-copyright {
+
+        justify-self: start;
+
+        -ms-flex-item-align: center;
+
+        align-self: center;
+
+        font-family: 'Lora', serif;
+
+    }
+
+    /* Contact */
+
+    #grid-legal-contact {
+
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 6;
+        grid-row-end: 8;
+
+    }
+
+    #grid-legal-heading-contact {
+
+        justify-self: start;
+
+        -ms-flex-item-align: center;
+
+        align-self: center;
+
+        font-family: 'Lora', serif;
+
+    }
+
+    /* Privacy */
+
+    #grid-legal-privacy {
+
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 8;
+        grid-row-end: 10;
+
+    }
+
+    #grid-legal-heading-privacy {
+
+        justify-self: start;
+
+        -ms-flex-item-align: center;
+
+        align-self: center;
+
+        font-family: 'Lora', serif;
+
+    }
+
+/* Classes */
+
+.grid-legal-paragraph {
+    
+    font-size: 1.2em;
+    
+}
+
+/* Sub Selectors */
+
+/* Animations */
+
+@-webkit-keyframes orangeFade {
+
+    from {
+
+        background-color: rgba(249, 192, 0, 0.7);
+
+    }
+
+    to {
+
+        background-color: rgba(249, 192, 0, 0);
+
+    }
+
+}
+
+@keyframes orangeFade {
+
+    from {
+
+        background-color: rgba(249, 192, 0, 0.7);
+
+    }
+
+    to {
+
+        background-color: rgba(249, 192, 0, 0);
+
+    }
+
+}
+
+/* Media Queries */
+
+@supports(display: grid) {
+
+    /* Older Monitors */
+
+    @media(max-width: 1280px) {
+
+        /* Id */
+        
+        #grid-content {
+
+            display: grid;
+
+            grid-template-columns: 10px 75px 250px auto;
+            grid-template-rows: 30px 70px 400px 70px 400px 70px 400px 70px 400px 70px 400px auto;
+
+        }
+
+        /* Classes */
+
+    }
+
+    /* Tablet */
+
+    /* Phone */
+
+    @media(max-width: 768px) {
+
+
+
+    }
+
+}
