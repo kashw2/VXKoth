@@ -18,10 +18,10 @@
 
 // Connection for player stats
 
-$VX_KOTH_RC = "18.217.44.14:3306";
-$VX_KOTH_USER = "mckA45fNfTJo4XaQ";
-$VX_KOTH_PASS = "QjJz679Ki868*JD#byn&omCWOdzr@8rVRZJjWCd5s";
-$VX_KOTH_DB = "vx";
+$VX_KOTH_RC = "";
+$VX_KOTH_USER = "";
+$VX_KOTH_PASS = "";
+$VX_KOTH_DB = "";
 
 $conn = new mysqli($VX_KOTH_RC, $VX_KOTH_USER, $VX_KOTH_PASS, $VX_KOTH_DB);
 
