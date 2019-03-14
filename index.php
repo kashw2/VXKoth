@@ -375,8 +375,8 @@ require_once('mysql.php');
             <div id="grid-footer">
 
                 <!-- Logos and Association-->
-                <img id="grid-footer-vx-logo" src="http://vxlabs.us/VX_Koth_v3/img/VXLogo.png">
-                <img id="grid-footer-armahosts-logo" src="http://vxlabs.us/VX_Koth_v3/img/ArmaHosts.png">
+                <img id="grid-footer-vx-logo" src="img/VXLogo.png">
+                <img id="grid-footer-armahosts-logo" src="img/ArmaHosts.png">
 
                 <!-- General Information -->
                 <div id="grid-footer-information">
@@ -405,10 +405,10 @@ require_once('mysql.php');
                 <!-- Social Media -->
                 <div id="grid-footer-media">
 
-                    <img id="grid-footer-facebook-logo" class="grid-footer-logos" src="http://vxlabs.us/VX_Koth_v3/img/FacebookLogo.png">
-                    <img id="grid-footer-twitter-logo" class="grid-footer-logos" src="http://vxlabs.us/VX_Koth_v3/img/TwitterLogo.png">
-                    <img id="grid-footer-youtube-logo" class="grid-footer-logos" src="http://vxlabs.us/VX_Koth_v3/img/YoutubeLogo.png">
-                    <img id="grid-footer-discord-logo" class="grid-footer-logos" src="http://vxlabs.us/VX_Koth_v3/img/DiscordLogo.png">
+                    <img id="grid-footer-facebook-logo" class="grid-footer-logos" src="img/FacebookLogo.png">
+                    <img id="grid-footer-twitter-logo" class="grid-footer-logos" src="img/TwitterLogo.png">
+                    <img id="grid-footer-youtube-logo" class="grid-footer-logos" src="img/YoutubeLogo.png">
+                    <img id="grid-footer-discord-logo" class="grid-footer-logos" src="img/DiscordLogo.png">
 
                     <p id="grid-footer-misc-disclaimer">This website is not affiliated or authorized by Bohemia Interactive. Bohemia Interactive, ARMA, DAYZ and all associated logos and designs are trademarks of Bohemia Interactive</p>
 
